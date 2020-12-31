@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Harkirat Gill</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        
+        <style>
+            .sidenav {
+                height: 100%;
+                width: 16em;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: #111;
+                color: #eee;
+                overflow-x: hidden;
+                padding:0.5em;
+            }
+
+            .content {
+                margin-left: 16em;
+                background-color: #f6f6f6;
+            }
+
+            .minor-text {
+                opacity: 0.6;
+                font-size: 0.95em;
+            }
+
+            .section-head {
+                text-align: center;
+            }
+
+            .project-container {
+                background-color: #fff;
+                color: black;
+                border: 1px solid lightgray;
+                border-radius: 0.2em;
+                padding: 1em;
+                margin: 1em;
+            }
+
+            .link-container {
+                padding: 1em;
+            }
+
+            .side-link {
+                color: white;
+                opacity: 0.6;
+            }
+
+            .side-link:hover {
+                opacity: 1;
+                color: white;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- Side main info -->
+        <div class="sidenav">
+            <div class="container">
+                <br/>
+                <h1>Harkirat Gill</h1>
+                <p class="minor-text">Artificial Intelligence Engineer</p>
+                
+                <br/>
+
+                <div class="link-container">
+                    <a href="#about" class="side-link">About</a>
+                    <br/><br/>
+                    <a href="#ai" class="side-link">AI Projects</a>
+                    <br/><br/>
+                    <a href="#web-mobile" class="side-link">Web and Mobile</a>
+                    <br/><br/>
+                    <a href="#art" class="side-link">Art</a>
+                    <br/><br/>
+                    <a href="#contact" class="side-link">Contact</a>
+                    <br/>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <!-- About -->
+            <div id="about" class="container pt-4">
+                <h4 class="section-head">About</h4>
+                <p>
+                    I am currently a graduate student at Northwestern University Studying Artificial Intelligence.
+                    I have worked on numerous personal, acedemic, research, and internship AI projects as well as a number of mobile and web projects outlined below.
+
+                    <br/><br/>
+
+                    <b>Areas of Interest</b>
+                    <br/>
+
+                    <h5>
+                        <span class="badge badge-dark">Deep Learning</span>
+                        <span class="badge badge-dark">Computer Vision</span>
+                        <span class="badge badge-dark">Reinforcement Learning</span>
+                        <span class="badge badge-dark">Game Theory</span>
+                        <span class="badge badge-dark">Knowledge Representation</span>
+                    </h5>
+                    
+                </p>
+            </div>
+
+            <hr/>
+
+            <!-- AI Projects -->
+            <div id="ai" class="container pt-4">
+                <h4 class="section-head">AI Projects</h4>
+
+                <!-- Adversarial -->
+                <div class="project-container">
+                    <h5>Image Classification Adversarial Defense - University Research - 2019</h5>
+                    <p>
+                        I worked on creating a defense against adversarial attacks for image models using a VAE to reconstruct the perturbed image building on existing research which uses this approach.
+                        Our VAE was able to create higher resolution reconstructions and achieve a slightly better performance across multiple attack methods.
+                    </p>
+                    <img src="{% static 'adversarialproject.png' %}" width="100%">
+                    <p>
+                        The model was trained on CIFAR10 and evaluated against the FGSM, RAND-FGSM, and CW adversarial attacks.
+                        After this research, I became more interested in exploring what techniques can allow models to become inherently more robust and experimented with different ideas.
+                    </p>
+
+                    <p>
+                        <span class="badge badge-secondary">TensorFlow</span>
+                        <span class="badge badge-secondary">VAE</span>
+                        <span class="badge badge-secondary">CleverHans</span>
+                        <span class="badge badge-secondary">CIFAR10 Dataset</span>
+                    </p>
+                </div>
+
+                <!-- Doodle Renderer -->
+                <div class="project-container">
+                    <h5>Deep Doodle Renderer - 2018</h5>
+                    <p>
+                        For one of my first computer vision projects, I created a deep neural network model with the objective of making simple doodles more realistic.
+                        I restricted the class of objects to just 3 types of fruits initially to simplify the task.
+                    </p>
+                    <img src="{% static 'doodleproject.png' %}" width="100%">
+                    <p>
+                        Using an ensemble of deep convolutional autoencoders with different depths and a GAN based on DeblurGAN, this model renders the doodle with color and shade and uses the GAN to sharpen the output and add more realistic effects.
+                        The GAN slightly improved the output, but added some artifacts which I believe was partially a result of the GAN being too small.
+                    </p>
+
+                    <p>
+                        <span class="badge badge-secondary">Keras</span>
+                        <span class="badge badge-secondary">CNN</span>
+                        <span class="badge badge-secondary">Autoencoder</span>
+                        <span class="badge badge-secondary">GAN</span>
+                    </p>
+                </div>
+
+                <!-- Market Prediction -->
+                <div class="project-container">
+                    <h5>Market Prediction Using Google Search Trends - 2018</h5>
+                    <p>
+                        Using data from Google trends of different kinds of search phrases like "stocks to buy" or "stocks to sell", I experimented with different deep learning based approaches to predict how the DOWJIA and S&P500 would react.
+                        I experimented with different models and other financial data including options data, initially treating this as a sequential prediction task using an LSTM. Later, due to time limitations, I simply aimed to gauge the positivity or negativaty of different Google search phrases and predict whether the DOWJIA or S&P500 would go up or down in response the following week.
+                    </p>
+                    <p>
+                        Across different models, training approaches, and features, I achieved on average, a somewhat better than chance prediction of around 55%-60% accuracy in forcasting in a week how the market would move.
+                        This project was inspired by existing research which did not use machine learning and evaluated performance differently, but it looked like I had similiar results to.
+                    </p>
+
+                    <p>
+                        <span class="badge badge-secondary">Keras</span>
+                        <span class="badge badge-secondary">Google Trends Data</span>
+                        <span class="badge badge-secondary">Yahoo Finance Data</span>
+                        <span class="badge badge-secondary">LSTM</span>
+                    </p>
+                </div>
+
+                <!-- Music Generation -->
+                <!--
+                <div class="project-container">
+                    <h5>Music Generation - 2020</h5>
+                    <p>I made a deep net that shoots some cool tunes. I still have to put that up</p>
+                    
+                    <p>
+                        <span class="badge badge-secondary">something...</span>
+                    </p>
+
+                    <a href="">github repository</a>
+                </div>
+                -->
+
+                <!-- Other AI -->
+                <div class="project-container">
+                    <h5>Other Academic and Personal Projects</h5>
+                    <p>
+                        Bayesian network loan default prediction, NLP story generation, NLP chatbot, and reinforcement learning in Pacman.
+                    </p>
+                </div>
+
+                <br/>
+
+            </div>
+
+            <hr/>
+
+            <!-- Web and Mobile Projects -->
+            <div id="web-mobile" class="container pt-4">
+                <h4 class="section-head">Web and Mobile Projects</h4>
+
+                <!-- Mindstak -->
+                <div class="project-container">
+                    <h5>Mindstak Discussion Platform - 2019</h5>
+                    <img src="{% static 'mindstakproject.png' %}" width="100%">
+                    <p>
+                        I created a discussion platform aimed at improving online conversations and increasing the chances of users in a conversation or debate of reaching common ground.
+                        I designed and refined the idea, developed the website with some collaboration, and worked on different marketing campaigns.
+                    </p>
+
+                    <p>
+                        <span class="badge badge-secondary">Django</span>
+                        <span class="badge badge-secondary">SQL</span>
+                        <span class="badge badge-secondary">Google Analytics</span>
+                        <span class="badge badge-secondary">Google Ads</span>
+                    </p>
+
+                    <a href="https://www.mindstak.com">www.mindstak.com</a>
+                </div>
+
+                <!-- Vananj -->
+                <div class="project-container">
+                    <h5>Vananj Graphics Market - 2020</h5>
+                    <img src="{% static 'vananjproject.png' %}" width="100%">
+                    <p>
+                        I helped create a minimalist freelance graphics market which aims to simplify the work on the part of the buyer.
+                        I worked on helping develop the idea, designing the database, developing parts of the backend, parts of the UI, as well as marketing.
+                    </p>
+
+                    <p>
+                        <span class="badge badge-secondary">Django</span>
+                        <span class="badge badge-secondary">SQL</span>
+                        <span class="badge badge-secondary">PayPal API</span>
+                        <span class="badge badge-secondary">Google Analytics</span>
+                        <span class="badge badge-secondary">Google Ads</span>
+                    </p>
+
+                    <a href="https://www.vananj.com">www.vananj.com</a>
+                </div>
+
+                <!-- STH Game -->
+                <div class="project-container">
+                    <h5>Space Time Horizon Mobile Game - 2018</h5>
+                    <img src="{% static 'sthproject.png' %}" width="100%">
+                    <p>
+                        Space Time Horizon is an iOS and Android app which built on the Box2D physics engine to allow for teleportation and time travel in the game.
+                        The levels are designed to allow for creative and unintuitive uses of teleportation and time travel to reach the destination.
+                    </p>
+                    <p>
+                        I worked on this project on and off over the course of two years and worked on every aspect from creating the idea, to programming the game, designing the levels, creating the music and sound effects, designing and creating the graphics, font, and UI, as well as creating multiple marketing campaigns for the Android version.
+                    </p>
+
+                    <p>
+                        <span class="badge badge-secondary">libGDX</span>
+                        <span class="badge badge-secondary">Box2D</span>
+                        <span class="badge badge-secondary">Google Ads</span>
+                    </p>
+
+                    <a href="https://play.google.com/store/apps/details?id=com.cosmodigital.spacetimehorizon&hl=en_US&gl=US">Space Time Horizon on Google Play</a>
+                </div>
+
+                <!-- Other Apps -->
+                <div class="project-container">
+                    <h5>Other Mobile Apps</h5>
+                    <img src="{% static 'otherapps.png' %}" width="100%">
+                    
+                    <a href="https://play.google.com/store/apps/details?id=com.cosmodigital.triviafive&hl=en_US&gl=US">Trivia 5</a>
+                    <br/>
+                    <a href="https://play.google.com/store/apps/details?id=com.cosmodigital.rocketcoyote&hl=en_US&gl=US">Rocket Coyote</a>
+                    <br/>
+                    <a href="https://play.google.com/store/apps/details?id=com.cosmodigital.baseconversioncalculator&hl=en_US&gl=US">Base Conversion Calculator</a>
+                </div>
+
+                <br/>
+
+            </div>
+
+            <hr/>
+
+            <!-- Art -->
+            <div id="art" class="container pt-4">
+                <h4 class="section-head">Art</h4>
+                <p>In my free time I enjoy drawing and painting. Much of my artwork is on my art website <a href="https://www.gillarts.com">www.gillarts.com</a></p>
+                <br/>
+            </div>
+
+            <hr/>
+
+            <!-- Contact -->
+            <div id="contact" class="container pt-4">
+                <h4 class="section-head">Contact</h4>
+                <div style="text-align: center;">
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSerdskXboycfgACYQsAQ4aufewPm9yDi6KDmX2EfQ1Zc8JkOQ/viewform?embedded=true" width="640" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                </div>
+                
+            </div>
+
+            <br/><br/>
+        </div>
+        
+        
+
+        <!-- Bootstrap -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>
