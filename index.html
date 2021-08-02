@@ -24,6 +24,7 @@
             .content {
                 margin-left: 16em;
                 background-color: #f6f6f6;
+                display: inline-block;
             }
 
             .minor-text {
@@ -37,11 +38,14 @@
 
             .project-container {
                 background-color: #fff;
+                display: inline-block;
                 color: black;
                 border: 1px solid lightgray;
                 border-radius: 0.2em;
                 padding: 1em;
-                margin: 1em;
+                margin: 0.2em;
+                width: 24em;
+                vertical-align: top;
             }
 
             .link-container {
@@ -73,9 +77,7 @@
                 <div class="link-container">
                     <a href="#about" class="side-link">About</a>
                     <br/><br/>
-                    <a href="#ai" class="side-link">AI Projects</a>
-                    <br/><br/>
-                    <a href="#web-mobile" class="side-link">Web and Mobile</a>
+                    <a href="#projects" class="side-link">Projects</a>
                     <br/><br/>
                     <a href="#art" class="side-link">Art</a>
                     <br/><br/>
@@ -93,197 +95,340 @@
                 <p>
                     I am currently a graduate student at Northwestern University Studying Artificial Intelligence.
                     I have worked on numerous personal, acedemic, research, and internship AI projects as well as a number of mobile and web projects outlined below.
-
-                    <br/><br/>
-
-                    <b>Areas of Interest</b>
-                    <br/>
-
-                    <h5>
-                        <span class="badge badge-dark">Deep Learning</span>
-                        <span class="badge badge-dark">Computer Vision</span>
-                        <span class="badge badge-dark">Reinforcement Learning</span>
-                        <span class="badge badge-dark">Game Theory</span>
-                        <span class="badge badge-dark">Knowledge Representation</span>
-                    </h5>
-                    
                 </p>
+                
+                <br/>
+
+                <b>Areas of Interest</b>
+                <br/>
+
+                <h5>
+                    <span class="badge badge-dark">Machine Learning</span>
+                    <span class="badge badge-dark">Game Theory</span>
+                    <span class="badge badge-dark">Computer Vision</span>
+                    <span class="badge badge-dark">Reinforcement Learning</span>
+                </h5>
             </div>
 
             <hr/>
 
-            <!-- AI Projects -->
-            <div id="ai" class="container pt-4">
-                <h4 class="section-head">AI Projects</h4>
-
-                <!-- Adversarial -->
+            <!-- Projects -->
+            <h4 class="section-head">Projects</h4>
+                
+            <br/>
+            
+            <div id="projects" class="container pt-4">
+                
+                <!-- VSR -->
                 <div class="project-container">
-                    <h5>Image Classification Adversarial Defense - University Research - 2019</h5>
-                    <p>
-                        I worked on creating a defense against adversarial attacks for image models using a VAE to reconstruct the perturbed image building on existing research which uses this approach.
-                        Our VAE was able to create higher resolution reconstructions and achieve a slightly better performance across multiple attack methods.
-                    </p>
-                    <img src="imgs/adversarialproject.png" width="100%">
-                    <p>
-                        The model was trained on CIFAR10 and evaluated against the FGSM, RAND-FGSM, and CW adversarial attacks.
-                        After this research, I became more interested in exploring what techniques can allow models to become inherently more robust and experimented with different ideas.
-                    </p>
+                    <h5>Video Super Resolution - 2021</h5>
+                    <p class="text-secondary">Northwestern Image Video Processing Lab Research</p>
+                    
+                    <p>Currently working on research using attention based transformer model to super enhance resolution of video.</p>
+                    
+                    <p><a href="https://github.com/harkirat2021/vsr-transformer-research">github repo</a></p>
 
                     <p>
-                        <span class="badge badge-secondary">TensorFlow</span>
-                        <span class="badge badge-secondary">VAE</span>
-                        <span class="badge badge-secondary">CleverHans</span>
-                        <span class="badge badge-secondary">CIFAR10 Dataset</span>
+                        <span class="badge badge-secondary">Deep Learning</span>
+                        <span class="badge badge-secondary">Super Resolution</span>
+                        <span class="badge badge-secondary">Transformers</span>
+                        <span class="badge badge-secondary">PyTorch</span>
                     </p>
                 </div>
-
-                <!-- Doodle Renderer -->
+                
+                <!-- Hierarchical Sequence Modeling -->
                 <div class="project-container">
-                    <h5>Deep Doodle Renderer - 2018</h5>
+                    <h5>Hierarchical Sequence Modeling - 2021</h5>
+                    <p class="text-secondary">Independent Research</p>
+                    
+                    <p>Currently working on research developing deep neural architecture to efficiently model hierarchical structure in sequential data such as text or video.</p>
+                    
+                    <p><a href="https://github.com/harkiratsg/hierarchical-sequence-modeling">github repo</a></p>
+                    
                     <p>
-                        For one of my first computer vision projects, I created a deep neural network model with the objective of making simple doodles more realistic.
-                        I restricted the class of objects to just 3 types of fruits initially to simplify the task.
-                    </p>
-                    <img src="imgs/doodleproject.png" width="100%">
-                    <p>
-                        Using an ensemble of deep convolutional autoencoders with different depths and a GAN based on DeblurGAN, this model renders the doodle with color and shade and uses the GAN to sharpen the output and add more realistic effects.
-                        The GAN slightly improved the output, but added some artifacts which I believe was partially a result of the GAN being too small.
-                    </p>
-
-                    <p>
-                        <span class="badge badge-secondary">Keras</span>
-                        <span class="badge badge-secondary">CNN</span>
-                        <span class="badge badge-secondary">Autoencoder</span>
-                        <span class="badge badge-secondary">GAN</span>
+                        <span class="badge badge-secondary">Deep Learning</span>
+                        <span class="badge badge-secondary">Sequence Modeling</span>
+                        <span class="badge badge-secondary">PyTorch</span>
                     </p>
                 </div>
-
-                <!-- Market Prediction -->
+                
+                <!-- Narrative Generation -->
                 <div class="project-container">
-                    <h5>Market Prediction Using Google Search Trends - 2018</h5>
-                    <p>
-                        Using data from Google trends of different kinds of search phrases like "stocks to buy" or "stocks to sell", I experimented with different deep learning based approaches to predict how the DOWJIA and S&P500 would react.
-                        I experimented with different models and other financial data including options data, initially treating this as a sequential prediction task using an LSTM. Later, due to time limitations, I simply aimed to gauge the positivity or negativaty of different Google search phrases and predict whether the DOWJIA or S&P500 would go up or down in response the following week.
-                    </p>
-                    <p>
-                        Across different models, training approaches, and features, I achieved on average, a somewhat better than chance prediction of around 55%-60% accuracy in forcasting in a week how the market would move.
-                        This project was inspired by existing research which did not use machine learning and evaluated performance differently, but it looked like I had similiar results to.
-                    </p>
+                    <div>
+                        <h5>AI Narrative Generation - 2021</h5>
+                        <p class="text-secondary">Northwestern University Research</p>
 
+                        <p>Worked on research designing system using emotion controlled deep transformer models and narrative frames to generate coherent narrative scripts.</p>
+                        
+                        <p><a href="https://github.com/simon-benigeri/narrative-generation">github repo</a></p>
+
+                        <p>
+                            <span class="badge badge-secondary">Controlled Generation</span>
+                            <span class="badge badge-secondary">GPT-2 Transformer</span>
+                            <span class="badge badge-secondary">PyTorch</span>
+                            <span class="badge badge-secondary">Python OOP</span>
+                        </p>
+                    </div>
+                    
+                </div>
+                
+                <!-- CA Novelty Generation -->
+                <div class="project-container">
+                    <h5>Cellular Automaton Novelty Generation - 2021</h5>
+                    <p class="text-secondary">Multi Agent Modeling Course</p>
+                    
+                    <img src="imgs/novelty_generation.png" width="100%">
+                    
+                    <p>Designed novelty generation metrics for continious cellular automaton system to train neural network and genetic algorithm models to generate maximally novel patterns</p>
+                    
+                    <p><a href="https://github.com/harkiratsg/ca-novelty-generation">github repo</a></p>
+                    
                     <p>
-                        <span class="badge badge-secondary">Keras</span>
-                        <span class="badge badge-secondary">Google Trends Data</span>
-                        <span class="badge badge-secondary">Yahoo Finance Data</span>
-                        <span class="badge badge-secondary">LSTM</span>
+                        <span class="badge badge-secondary">Cellular Automaton</span>
+                        <span class="badge badge-secondary">Deep Learning</span>
+                        <span class="badge badge-secondary">Genetic Algorithms</span>
+                        <span class="badge badge-secondary">Novelty Search</span>
+                        <span class="badge badge-secondary">PyTorch</span>
                     </p>
                 </div>
-
+                
+                <!-- RL Trading Agent -->
+                <div class="project-container">
+                    <h5>Deep Reinforcement Learning Trading Agent - 2021</h5>
+                    <p class="text-secondary">Advanced Deep Learning Course</p>
+                    
+                    <p>Implemented research paper using deep reinforcement learning to make trading decisions on multiple stock indices and using transfer learning on component stocks to improve performance.</p>
+                    
+                    <p><a href="https://github.com/lukesalamone/deep-q-trading-agent">github repo</a></p>
+                    
+                    <p>
+                        <span class="badge badge-secondary">Deep Reinforcement Learning</span>
+                        <span class="badge badge-secondary">Transfer Learning</span>
+                        <span class="badge badge-secondary">Stock Index Data</span>
+                        <span class="badge badge-secondary">PyTorch</span>
+                    </p>
+                </div>
+                
+                <!-- CPDP Analysis -->
+                <div class="project-container">
+                    <h5>Citizens Police Data Project Analysis - 2020</h5>
+                    <p class="text-secondary">Data Science Course</p>
+                    
+                    <p>Explored and analyzed Citizens Police Data Project to better understand how policing varies between communities in Chicago.</p>
+                    
+                    <p><a href="https://github.com/Faraaz-Beyabani/CPDP_Daring_Riddlers">github repo</a></p>
+                    
+                    <p>
+                        <span class="badge badge-secondary">Data Visualization</span>
+                        <span class="badge badge-secondary">Predictive Modeling</span>
+                        <span class="badge badge-secondary">Pandas</span>
+                        <span class="badge badge-secondary">SKLearn</span>
+                    </p>
+                </div>
+                
                 <!-- Music Generation -->
                 <!--
                 <div class="project-container">
-                    <h5>Music Generation - 2020</h5>
-                    <p>I made a deep net that shoots some cool tunes. I still have to put that up</p>
+                    <h5>TODO: AI Music Generation - 2020</h5>
+                    <p class="text-secondary">Independent Project</p>
+                    
+                    <p>Used deep learning and genetic algorithms trained on classical music to generate new music.</p>
+                    
+                    <p><a href="">github repo</a></p>
                     
                     <p>
-                        <span class="badge badge-secondary">something...</span>
+                        <span class="badge badge-secondary">Generative Modeling</span>
+                        <span class="badge badge-secondary">Deep Learning</span>
+                        <span class="badge badge-secondary">Genetic Algorithms</span>
+                        <span class="badge badge-secondary">PyTorch</span>
                     </p>
+                </div>
+-->
+                
+                <!-- Pacman Agent -->
+                <div class="project-container">
+                    <h5>AI Pacman - 2020</h5>
+                    <p class="text-secondary">Artificial Intelligence Course</p>
+                    
+                    <p>Created AI agents to play team based Pacman capture flags game in team project. Iterated AI design through competition.</p>
+                    
+                    <p><a href="">github repo TODO</a></p>
+                    
+                    <p>
+                        <span class="badge badge-secondary">Reinforcement Learning</span>
+                        <span class="badge badge-secondary">AI Search Algorithms</span>
+                        <span class="badge badge-secondary">Numpy</span>
+                    </p>
+                </div>
+                
+                <!-- Trivia Strategy Game -->
+                <div class="project-container">
+                    <h5>Trivia Strategy Game - 2020</h5>
+                    <p class="text-secondary">Benedictine University Capstone Course</p>
+                    
+                    <p>Worked on team project to help create platform where companies can raise money by setting up live team based trivia competitions with the goal of conquering the game map. Implemented payement system, chatbot, and bots that play with live users.</p>
+                    
+                    <p>
+                        <span class="badge badge-secondary">MEAN Stack</span>
+                        <span class="badge badge-secondary">Frontend Development</span>
+                        <span class="badge badge-secondary">Backend Development</span>
+                        <span class="badge badge-secondary">Angular.js</span>
+                        <span class="badge badge-secondary">Node.js</span>
+                    </p>
+                </div>
+                
+                <!-- Vananj -->
+                <div class="project-container">
+                    <h5>Vananj - Graphics Market - 2019</h5>
+                    <p class="text-secondary"></p>
+                    
+                    <p>Helped build graphics market designed to simplify work for buyers. Worked on system design, development, product iteration, and marketing.</p>
+                    
+                    <p><a href="https://www.vananj.com">www.vananj.com</a></p>
+                    
+                    <p>
+                        <span class="badge badge-secondary">Django Web Development</span>
+                        <span class="badge badge-secondary">Marketing</span>
+                    </p>
+                </div>
 
-                    <a href="">github repository</a>
+                <!-- Adversarial -->
+                <div class="project-container">
+                    <h5>Computer Vision Adversarial Defense - 2019</h5>
+                    <p class="text-secondary">Benedictine University Research</p>
+                    
+                    <img src="imgs/adversarialproject.png" width="100%">
+                    
+                    <p>Worked on creating a defense against adversarial attacks for image models using a VAE to reconstruct the perturbed image. Constantly working on improving approach</p>
+                    
+                    <p><a href="">github repo TODO</a></p>
+
+                    <p>
+                        <span class="badge badge-secondary">VAE</span>
+                        <span class="badge badge-secondary">Adversarial Defense</span>
+                        <span class="badge badge-secondary">TensorFlow</span>
+                    </p>
+                </div>
+                
+                <!-- Mindstak -->
+                <div class="project-container">
+                    <h5>Mindstak - Discussion Platform - 2019</h5>
+                    <p class="text-secondary"></p>
+                    
+                    <p>Created discussion platform designed to make online discourse more productive by rewarding users for changing minds and achieving common ground on disagreements.</p>
+                    
+                    <p><a href="https://www.mindstak.com">www.mindstak.com</a></p>
+                    
+                    <p>
+                        <span class="badge badge-secondary">Django Web Development</span>
+                        <span class="badge badge-secondary">Marketing</span>
+                    </p>
+                </div>
+                
+                <!-- Loan Default Prediction -->
+                <!--
+                <div class="project-container">
+                    <h5>Bayesian Model Loan Default Prediction - 2019</h5>
+                    <p class="text-secondary">Probability and Statistics Course</p>
+                    
+                    <p>Used Bayesian Networks to make predict whether user will default on loan.</p>
+                    
+                    <p><a href="">github repo</a></p>
+                    
+                    <p>
+                        <span class="badge badge-secondary">Bayesian Networks</span>
+                        <span class="badge badge-secondary">Loan Default Prediction</span>
+                        <span class="badge badge-secondary">R</span>
+                    </p>
                 </div>
                 -->
 
-                <!-- Other AI -->
+                <!-- Doodle Renderer -->
                 <div class="project-container">
-                    <h5>Other Academic and Personal Projects</h5>
+                    <h5>Deep Learning Doodle Renderer - 2018</h5>
+                    <p class="text-secondary">Machine Learning Course</p>
+                    
+                    <img src="imgs/doodleproject.png" width="100%">
+                    
+                    <p>Created a deep neural network model with the objective of rendering simple doodles to look realistic</p>
+                    
+                    <p><a href="">github repo TODO</a></p>
+
                     <p>
-                        Bayesian network loan default prediction, NLP story generation, NLP chatbot, and reinforcement learning in Pacman.
+                        <span class="badge badge-secondary">Deep Learning</span>
+                        <span class="badge badge-secondary">Generative Modeling</span>
+                        <span class="badge badge-secondary">Autoencoder</span>
+                        <span class="badge badge-secondary">GAN</span>
+                        <span class="badge badge-secondary">Ensemble Modeling</span>
+                        <span class="badge badge-secondary">Keras</span>
                     </p>
                 </div>
 
-                <br/>
-
-            </div>
-
-            <hr/>
-
-            <!-- Web and Mobile Projects -->
-            <div id="web-mobile" class="container pt-4">
-                <h4 class="section-head">Web and Mobile Projects</h4>
-
-                <!-- Mindstak -->
+                <!-- Stock Market Prediction -->
                 <div class="project-container">
-                    <h5>Mindstak Discussion Platform - 2019</h5>
-                    <img src="imgs/'mindstakproject.png'" width="100%">
+                    <h5>Deep Learning Learning Stock Market Prediction - 2018</h5>
+                    <p class="text-secondary">Independent Project</p>
+                    
+                    <p>Used machine learning models to predict trends of S&P 500 and DOWJIA indicies based on Google trends search sentiment.</p>
+                    
+                    <p><a href="">github repo TODO</a></p>
+                    
                     <p>
-                        I created a discussion platform aimed at improving online conversations and increasing the chances of users in a conversation or debate of reaching common ground.
-                        I designed and refined the idea, developed the website with some collaboration, and worked on different marketing campaigns.
+                        <span class="badge badge-secondary">Deep Sequence Learning</span>
+                        <span class="badge badge-secondary">Google Trends</span>
+                        <span class="badge badge-secondary">Stock Index Data</span>
+                        <span class="badge badge-secondary">Keras</span>
                     </p>
-
-                    <p>
-                        <span class="badge badge-secondary">Django</span>
-                        <span class="badge badge-secondary">SQL</span>
-                        <span class="badge badge-secondary">Google Analytics</span>
-                        <span class="badge badge-secondary">Google Ads</span>
-                    </p>
-
-                    <a href="https://www.mindstak.com">www.mindstak.com</a>
                 </div>
-
-                <!-- Vananj -->
-                <div class="project-container">
-                    <h5>Vananj Graphics Market - 2020</h5>
-                    <img src="imgs/vananjproject.png" width="100%">
-                    <p>
-                        I helped create a minimalist freelance graphics market which aims to simplify the work on the part of the buyer.
-                        I worked on helping develop the idea, designing the database, developing parts of the backend, parts of the UI, as well as marketing.
-                    </p>
-
-                    <p>
-                        <span class="badge badge-secondary">Django</span>
-                        <span class="badge badge-secondary">SQL</span>
-                        <span class="badge badge-secondary">PayPal API</span>
-                        <span class="badge badge-secondary">Google Analytics</span>
-                        <span class="badge badge-secondary">Google Ads</span>
-                    </p>
-
-                    <a href="https://www.vananj.com">www.vananj.com</a>
-                </div>
-
-                <!-- STH Game -->
+                
+                <!-- Space Time Horizon -->
                 <div class="project-container">
                     <h5>Space Time Horizon Mobile Game - 2018</h5>
-                    <img src="imgs/sthproject.png" width="100%">
-                    <p>
-                        Space Time Horizon is an iOS and Android app which built on the Box2D physics engine to allow for teleportation and time travel in the game.
-                        The levels are designed to allow for creative and unintuitive uses of teleportation and time travel to reach the destination.
-                    </p>
-                    <p>
-                        I worked on this project on and off over the course of two years and worked on every aspect from creating the idea, to programming the game, designing the levels, creating the music and sound effects, designing and creating the graphics, font, and UI, as well as creating multiple marketing campaigns for the Android version.
-                    </p>
-
-                    <p>
-                        <span class="badge badge-secondary">libGDX</span>
-                        <span class="badge badge-secondary">Box2D</span>
-                        <span class="badge badge-secondary">Google Ads</span>
-                    </p>
-
-                    <a href="https://play.google.com/store/apps/details?id=com.cosmodigital.spacetimehorizon&hl=en_US&gl=US">Space Time Horizon on Google Play</a>
-                </div>
-
-                <!-- Other Apps -->
-                <div class="project-container">
-                    <h5>Other Mobile Apps</h5>
-                    <img src="imgs/otherapps.png" width="100%">
+                    <p class="text-secondary">Independent Project</p>
                     
-                    <a href="https://play.google.com/store/apps/details?id=com.cosmodigital.triviafive&hl=en_US&gl=US">Trivia 5</a>
-                    <br/>
-                    <a href="https://play.google.com/store/apps/details?id=com.cosmodigital.rocketcoyote&hl=en_US&gl=US">Rocket Coyote</a>
-                    <br/>
-                    <a href="https://play.google.com/store/apps/details?id=com.cosmodigital.baseconversioncalculator&hl=en_US&gl=US">Base Conversion Calculator</a>
+                    <p>Created mobile strategy game where the user must use time travel and teleportation to avoid enemies and reach the exit portal in time.</p>
+                    
+                    <p><a href="https://play.google.com/store/apps/details?id=com.cosmodigital.spacetimehorizon&hl=en_US&gl=US">google play store</a></p>
+                    
+                    <p>
+                        <span class="badge badge-secondary">Cross Platform Development</span>
+                        <span class="badge badge-secondary">LibGDX</span>
+                        <span class="badge badge-secondary">Box2D Physics</span>
+                        <span class="badge badge-secondary">Marketing</span>
+                        <span class="badge badge-secondary">Java OOP</span>
+                    </p>
                 </div>
-
-                <br/>
-
+                
+                <!-- OOP Project -->
+                <div class="project-container">
+                    <h5>Strategy Maze Desktop Game - 2018</h5>
+                    <p class="text-secondary">Object Oriented Design Course</p>
+                    
+                    <p>Helped design and create java desktop game where user must navigate through maze while avoiding enemies in team project.</p>
+                    
+                    <p><a href="">github repo</a></p>
+                    
+                    <p>
+                        <span class="badge badge-secondary">Object Oriented Design</span>
+                        <span class="badge badge-secondary">Java OOP</span>
+                    </p>
+                </div>
+                
+                <!-- Rocket Coyote -->
+                <div class="project-container">
+                    <h5>Rocket Coyote Game - 2018</h5>
+                    <p class="text-secondary">Independent Project</p>
+                    
+                    <p>Created Android mobile game where user taps to control player and collect coins.</p>
+                    
+                    <p><a href="https://play.google.com/store/apps/details?id=com.cosmodigital.rocketcoyote&hl=en_US&gl=US">google play store</a></p>
+                    
+                    <p>
+                        <span class="badge badge-secondary">Android Development</span>
+                        <span class="badge badge-secondary">UI Design</span>
+                        <span class="badge badge-secondary">Java OOP</span>
+                    </p>
+                </div>                
             </div>
 
             <hr/>
@@ -291,7 +436,7 @@
             <!-- Art -->
             <div id="art" class="container pt-4">
                 <h4 class="section-head">Art</h4>
-                <p>In my free time I enjoy drawing and painting. Much of my artwork is on my art website <a href="https://www.gillarts.com">www.gillarts.com</a></p>
+                <p style="text-align: center;">In my free time I enjoy drawing and painting. Much of my artwork is on my art website <a href="https://www.gillarts.herokuapp.com">www.gillarts.herokuapp.com</a></p>
                 <br/>
             </div>
 
