@@ -25,6 +25,7 @@
                 margin-left: 16em;
                 background-color: #f6f6f6;
                 display: inline-block;
+                width: calc(100vw - 16em);
             }
 
             .minor-text {
@@ -34,6 +35,18 @@
 
             .section-head {
                 text-align: center;
+            }
+            
+            .projects {
+                margin: auto;
+                width: 90%;
+            }
+            
+            .project-img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 100%;
             }
 
             .project-container {
@@ -94,7 +107,7 @@
                 <h4 class="section-head">About</h4>
                 <p>
                     I am currently a graduate student at Northwestern University Studying Artificial Intelligence.
-                    I have worked on numerous personal, acedemic, research, and internship AI projects as well as a number of mobile and web projects outlined below.
+                    I have worked on a diverse set of AI/ML projects aand built severl web and mobile applications.
                 </p>
                 
                 <br/>
@@ -113,11 +126,10 @@
             <hr/>
 
             <!-- Projects -->
-            <h4 class="section-head">Projects</h4>
                 
             <br/>
             
-            <div id="projects" class="container pt-4">
+            <div id="projects" class="projects pt-4">
                 
                 <!-- VSR -->
                 <div class="project-container">
@@ -177,7 +189,7 @@
                     <h5>Cellular Automaton Novelty Generation - 2021</h5>
                     <p class="text-secondary">Multi Agent Modeling Course</p>
                     
-                    <img src="imgs/novelty_generation.png" width="100%">
+                    <img src="imgs/novelty_generation.png" class="project-img">
                     
                     <p>Designed novelty generation metrics for continious cellular automaton system to train neural network and genetic algorithm models to generate maximally novel patterns</p>
                     
@@ -197,6 +209,8 @@
                     <h5>Deep Reinforcement Learning Trading Agent - 2021</h5>
                     <p class="text-secondary">Advanced Deep Learning Course</p>
                     
+                    <img src="imgs/numq_trader.png" class="project-img">
+                    
                     <p>Implemented research paper using deep reinforcement learning to make trading decisions on multiple stock indices and using transfer learning on component stocks to improve performance.</p>
                     
                     <p><a href="https://github.com/lukesalamone/deep-q-trading-agent">github repo</a></p>
@@ -213,6 +227,8 @@
                 <div class="project-container">
                     <h5>Citizens Police Data Project Analysis - 2020</h5>
                     <p class="text-secondary">Data Science Course</p>
+                    
+                    <img src="imgs/cpdp_analysis.png" class="project-img">
                     
                     <p>Explored and analyzed Citizens Police Data Project to better understand how policing varies between communities in Chicago.</p>
                     
@@ -250,6 +266,8 @@
                     <h5>AI Pacman - 2020</h5>
                     <p class="text-secondary">Artificial Intelligence Course</p>
                     
+                    <img src="imgs/pacman.png" class="project-img">
+                    
                     <p>Created AI agents to play team based Pacman capture flags game in team project. Iterated AI design through competition.</p>
                     
                     <p><a href="">github repo TODO</a></p>
@@ -282,6 +300,8 @@
                     <h5>Vananj - Graphics Market - 2019</h5>
                     <p class="text-secondary"></p>
                     
+                    <img src="imgs/vananj.png" class="project-img">
+                    
                     <p>Helped build graphics market designed to simplify work for buyers. Worked on system design, development, product iteration, and marketing.</p>
                     
                     <p><a href="https://www.vananj.com">www.vananj.com</a></p>
@@ -297,7 +317,7 @@
                     <h5>Computer Vision Adversarial Defense - 2019</h5>
                     <p class="text-secondary">Benedictine University Research</p>
                     
-                    <img src="imgs/adversarialproject.png" width="100%">
+                    <img src="imgs/adversarialproject.png" class="project-img">
                     
                     <p>Worked on creating a defense against adversarial attacks for image models using a VAE to reconstruct the perturbed image. Constantly working on improving approach</p>
                     
@@ -315,6 +335,8 @@
                     <h5>Mindstak - Discussion Platform - 2019</h5>
                     <p class="text-secondary"></p>
                     
+                    <img src="imgs/mindstak.png" class="project-img">
+                    
                     <p>Created discussion platform designed to make online discourse more productive by rewarding users for changing minds and achieving common ground on disagreements.</p>
                     
                     <p><a href="https://www.mindstak.com">www.mindstak.com</a></p>
@@ -326,14 +348,15 @@
                 </div>
                 
                 <!-- Loan Default Prediction -->
-                <!--
                 <div class="project-container">
                     <h5>Bayesian Model Loan Default Prediction - 2019</h5>
                     <p class="text-secondary">Probability and Statistics Course</p>
                     
+                    <img src="imgs/bayesiannet_loan_pred.png" class="project-img">
+                    
                     <p>Used Bayesian Networks to make predict whether user will default on loan.</p>
                     
-                    <p><a href="">github repo</a></p>
+                    <p><a href="">github repo TODO</a></p>
                     
                     <p>
                         <span class="badge badge-secondary">Bayesian Networks</span>
@@ -341,14 +364,13 @@
                         <span class="badge badge-secondary">R</span>
                     </p>
                 </div>
-                -->
 
                 <!-- Doodle Renderer -->
                 <div class="project-container">
                     <h5>Deep Learning Doodle Renderer - 2018</h5>
                     <p class="text-secondary">Machine Learning Course</p>
                     
-                    <img src="imgs/doodleproject.png" width="100%">
+                    <img src="imgs/doodleproject.png" class="project-img">
                     
                     <p>Created a deep neural network model with the objective of rendering simple doodles to look realistic</p>
                     
@@ -386,6 +408,8 @@
                     <h5>Space Time Horizon Mobile Game - 2018</h5>
                     <p class="text-secondary">Independent Project</p>
                     
+                    <img src="imgs/sthproject.png" class="project-img">
+                    
                     <p>Created mobile strategy game where the user must use time travel and teleportation to avoid enemies and reach the exit portal in time.</p>
                     
                     <p><a href="https://play.google.com/store/apps/details?id=com.cosmodigital.spacetimehorizon&hl=en_US&gl=US">google play store</a></p>
@@ -418,6 +442,8 @@
                 <div class="project-container">
                     <h5>Rocket Coyote Game - 2018</h5>
                     <p class="text-secondary">Independent Project</p>
+                    
+                    <img src="imgs/rocketcoyote.png" class="project-img">
                     
                     <p>Created Android mobile game where user taps to control player and collect coins.</p>
                     
