@@ -79,7 +79,6 @@
             .full-butt {
                 width: 100%;
                 text-align: center;
-                color: darkslategray;
             }
         </style>
     </head>
@@ -99,7 +98,7 @@
                     <br/><br/>
                     <a href="#projects" class="side-link">Projects</a>
                     <br/><br/>
-                    <a href="#art" class="side-link">Art</a>
+                    <a href="https://www.gillarts.com" class="side-link">Art</a>
                     <br/><br/>
                     <a href="#contact" class="side-link">Contact</a>
                     <br/>
@@ -113,20 +112,20 @@
             <div id="about" class="container pt-4">
                 <h4 class="section-head">About</h4>
                 <p>
-                    I am currently a graduate student at Northwestern University Studying Artificial Intelligence.
-                    I have worked on a diverse set of AI/ML projects and built several web and mobile applications.
+                    I am an AI Engineer with an expertise in computer vision and NLP.
+                    I have done research work developing new deep learning methods and in developing and deploying machine learning pipelines for web and mobile applications.
                 </p>
                 
                 <br/>
 
-                <b>Areas of Interest</b>
+                <b>Areas of Expertise</b>
                 <br/>
 
                 <h5>
                     <span class="badge badge-dark">Machine Learning</span>
-                    <span class="badge badge-dark">Game Theory</span>
+                    <span class="badge badge-dark">Deep Learning</span>
                     <span class="badge badge-dark">Computer Vision</span>
-                    <span class="badge badge-dark">Reinforcement Learning</span>
+                    <span class="badge badge-dark">Natural Language Processing</span>
                 </h5>
             </div>
 
@@ -137,36 +136,57 @@
             <br/>
             
             <div id="projects" class="projects pt-4">
+
+                <!-- Neural Rendering -->
+                <div class="project-container">
+                    <h5>Neural Radiance Fields Implementation - 2022</h5>
+                    <p class="text-secondary">Northwestern University</p>
+                    <img src="imgs/neural_rendering.png" class="project-img">
+                    
+                    <p>Implementation light weight neural randiance fields for 3D </p>
+                    
+                    <p>
+                        <span class="badge badge-secondary">Deep Learning</span>
+                        <span class="badge badge-secondary">Computer Vision</span>
+                        <span class="badge badge-secondary">Neural Rendering</span>
+                    </p>
+                </div>
+
+                <!-- TODO - add some NLP thing here -->
+
+                <!-- WildMe Background Subtraction -->
+                <div class="project-container">
+                    <h5>Data Efficient Image Segmentation - 2022</h5>
+                    <p class="text-secondary">WildMe Nonprofit</p>
+
+                    <img src="imgs/background_subtraction.png" class="project-img" style="height: 9em; width: 14em;">
+                    
+                    <p>Developed deep learning method of automatically segmenting animal images using only bounding box labels for animal identification pipeline. Dramatically reducing the cost of annotation.</p>
+                    
+                    <p><a href="https://github.com/harkiratsg/animal-background-subtraction" class="btn btn-light full-butt">project repository</a></p>
+                    
+                    <p>
+                        <span class="badge badge-secondary">Deep Learning</span>
+                        <span class="badge badge-secondary">Computer Vision</span>
+                        <span class="badge badge-secondary">Image Segmentation</span>
+                    </p>
+                </div>
                 
                 <!-- VSR -->
                 <div class="project-container">
                     <h5>Video Super Resolution - 2021</h5>
                     <p class="text-secondary">Northwestern Image Video Processing Lab Research</p>
+
+                    <img src="imgs/vsr.png" class="project-img">
                     
-                    <p>Currently working on research using attention based transformer model to super enhance resolution of video.</p>
+                    <p>Worked on research using attention based transformer model to super enhance resolution of video.</p>
                     
-                    <p><a href="https://github.com/harkirat2021/vsr-transformer-research" class="btn btn-light full-butt">see full repo</a></p>
+                    <p><a href="https://github.com/harkirat2021/vsr-transformer-research" class="btn btn-light full-butt">project repository</a></p>
 
                     <p>
                         <span class="badge badge-secondary">Deep Learning</span>
                         <span class="badge badge-secondary">Super Resolution</span>
                         <span class="badge badge-secondary">Transformers</span>
-                        <span class="badge badge-secondary">PyTorch</span>
-                    </p>
-                </div>
-                
-                <!-- Hierarchical Sequence Modeling -->
-                <div class="project-container">
-                    <h5>Hierarchical Sequence Modeling - 2021</h5>
-                    <p class="text-secondary">Independent Research</p>
-                    
-                    <p>Currently working on research developing deep neural architecture to efficiently model hierarchical structure in sequential data such as text or video.</p>
-                    
-                    <p><a href="https://github.com/harkiratsg/hierarchical-sequence-modeling"class="btn btn-light full-butt">see full repo</a></p>
-                    
-                    <p>
-                        <span class="badge badge-secondary">Deep Learning</span>
-                        <span class="badge badge-secondary">Sequence Modeling</span>
                         <span class="badge badge-secondary">PyTorch</span>
                     </p>
                 </div>
@@ -177,9 +197,11 @@
                         <h5>AI Narrative Generation - 2021</h5>
                         <p class="text-secondary">Northwestern University Research</p>
 
+                        <img src="imgs/narrative_generation_system.png" class="project-img">
+
                         <p>Worked on research designing system using emotion controlled deep transformer models and narrative frames to generate coherent narrative scripts.</p>
                         
-                        <p><a href="https://github.com/simon-benigeri/narrative-generation"class="btn btn-light full-butt">see full repo</a></p>
+                        <p><a href="https://github.com/simon-benigeri/narrative-generation"class="btn btn-light full-butt">project repository</a></p>
 
                         <p>
                             <span class="badge badge-secondary">Controlled Generation</span>
@@ -193,14 +215,14 @@
                 
                 <!-- CA Novelty Generation -->
                 <div class="project-container">
-                    <h5>Cellular Automaton Novelty Generation - 2021</h5>
+                    <h5>Novel Neural Cellular Automaton - 2021</h5>
                     <p class="text-secondary">Multi Agent Modeling Course</p>
                     
                     <img src="imgs/novelty_generation.png" class="project-img">
                     
-                    <p>Designed novelty generation metrics for continious cellular automaton system to train neural network and genetic algorithm models to generate maximally novel patterns</p>
+                    <p>Designed neural cellular automotan for novelty generation metrics for continious cellular automaton system to train neural network and genetic algorithm models to generate maximally novel patterns</p>
                     
-                    <p><a href="https://github.com/harkiratsg/ca-novelty-generation"class="btn btn-light full-butt">see full repo</a></p>
+                    <p><a href="https://github.com/harkiratsg/ca-novelty-generation"class="btn btn-light full-butt">project repository</a></p>
                     
                     <p>
                         <span class="badge badge-secondary">Cellular Automaton</span>
@@ -220,7 +242,7 @@
                     
                     <p>Implemented research paper using deep reinforcement learning to make trading decisions on multiple stock indices and using transfer learning on component stocks to improve performance.</p>
                     
-                    <p><a href="https://github.com/lukesalamone/deep-q-trading-agent"class="btn btn-light full-butt">see full repo</a></p>
+                    <p><a href="https://github.com/lukesalamone/deep-q-trading-agent"class="btn btn-light full-butt">project repository</a></p>
                     
                     <p>
                         <span class="badge badge-secondary">Deep Reinforcement Learning</span>
@@ -239,7 +261,7 @@
                     
                     <p>Explored and analyzed Citizens Police Data Project to better understand how policing varies between communities in Chicago.</p>
                     
-                    <p><a href="https://github.com/Faraaz-Beyabani/CPDP_Daring_Riddlers" class="btn btn-light full-butt">see full repo</a></p>
+                    <p><a href="https://github.com/Faraaz-Beyabani/CPDP_Daring_Riddlers" class="btn btn-light full-butt">project repository</a></p>
                     
                     <p>
                         <span class="badge badge-secondary">Data Visualization</span>
@@ -309,7 +331,7 @@
                     
                     <p>Helped build graphics market designed to simplify work for buyers. Worked on system design, development, product iteration, and marketing.</p>
                     
-                    <p><a href="https://www.vananj.com"class="btn btn-light full-butt">www.vananj.com</a></p>
+                    <!-- <p><a href="https://www.vananj.com"class="btn btn-light full-butt">www.vananj.com</a></p> -->
                     
                     <p>
                         <span class="badge badge-secondary">Django Web Development</span>
@@ -342,7 +364,7 @@
                     
                     <p>Created discussion platform designed to make online discourse more productive by rewarding users for changing minds and achieving common ground on disagreements.</p>
                     
-                    <p><a href="https://www.mindstak.com"class="btn btn-light full-butt">www.mindstak.com</a></p>
+                    <!-- <p><a href="https://www.mindstak.com"class="btn btn-light full-butt">www.mindstak.com</a></p> -->
                     
                     <p>
                         <span class="badge badge-secondary">Django Web Development</span>
@@ -366,14 +388,14 @@
                     </p>
                 </div>
 
-                <!-- Doodle Renderer -->
+                <!-- Drawing Renderer -->
                 <div class="project-container">
-                    <h5>Deep Learning Doodle Renderer - 2018</h5>
+                    <h5>Deep Learning Deawing Renderer - 2018</h5>
                     <p class="text-secondary">Machine Learning Course</p>
                     
                     <img src="imgs/doodleproject.png" class="project-img">
                     
-                    <p>Created a deep neural network model with the objective of rendering simple doodles to look realistic</p>
+                    <p>Created a Pix2pix style deep neural network model with the objective of rendering simple drawings to look realistic</p>
 
                     <p>
                         <span class="badge badge-secondary">Deep Learning</span>
@@ -450,15 +472,6 @@
                         <span class="badge badge-secondary">Java OOP</span>
                     </p>
                 </div>                
-            </div>
-
-            <hr/>
-
-            <!-- Art -->
-            <div id="art" class="container pt-4">
-                <h4 class="section-head">Art</h4>
-                <p style="text-align: center;">In my free time I enjoy drawing and painting. Much of my artwork is on my art website <a href="https://www.gillarts.herokuapp.com">www.gillarts.herokuapp.com</a></p>
-                <br/>
             </div>
 
             <hr/>
