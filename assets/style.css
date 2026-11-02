@@ -23,7 +23,7 @@ button{font:inherit}
 .eyebrow{margin:0 0 23px;color:var(--accent);font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
 .intro-copy{margin:0;font:400 clamp(25px,3.5vw,41px)/1.42 'DM Sans',Arial,sans-serif;letter-spacing:-.045em}
 .intro-copy em{color:var(--accent);font-weight:400}
-.profile-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.profile-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
 .profile-card{padding:8px 0;background:transparent}
 .profile-card h2,.research-projects h2{margin:0 0 12px;font-size:20px;font-weight:600;line-height:1.4;letter-spacing:-.035em}
 .profile-card p{margin:0;color:var(--muted);font-size:17px;line-height:1.7}
