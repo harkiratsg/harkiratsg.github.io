@@ -5,7 +5,7 @@
   <title>Portfolio base</title>
 </head>
 <body>
-  <!-- Shared navigation template loaded by assets/site.js on every page. -->
+  <!-- Shared templates loaded by assets/site.js on every page. -->
   <template id="site-header">
     <header class="site-header">
       <a class="site-name" href="/">Harkirat Singh Gill<span class="name-dot">.</span></a>
@@ -22,9 +22,25 @@
         <a href="/" data-page="about">About</a>
         <a href="/writing/" data-page="writing">Writing</a>
         <a href="/artwork/" data-page="artwork">Artwork</a>
-        <a href="/contact/" data-page="contact">Contact</a>
+        <a href="#contact">Contact</a>
       </nav>
     </header>
+  </template>
+  <template id="site-footer">
+    <footer class="site-footer" id="contact">
+      <section class="contact-panel" aria-labelledby="footer-contact-title">
+        <h2 id="footer-contact-title">Get in touch</h2>
+        <form class="contact-form" action="https://docs.google.com/forms/d/e/1FAIpQLSerdskXboycfgACYQsAQ4aufewPm9yDi6KDmX2EfQ1Zc8JkOQ/formResponse" method="post" target="_blank" rel="noopener">
+          <label for="contact-email-field">Email</label>
+          <input id="contact-email-field" name="entry.53874021" type="email" autocomplete="email" required>
+          <label for="contact-message-field">Message</label>
+          <textarea id="contact-message-field" name="entry.645363770" rows="7" required></textarea>
+          <button type="submit">Send message</button>
+          <p class="form-hint">A confirmation will open in a new tab.</p>
+        </form>
+      </section>
+      <p class="footer-copyright">© <span data-current-year></span> Harkirat Singh Gill</p>
+    </footer>
   </template>
 </body>
 </html>

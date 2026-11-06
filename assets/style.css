@@ -48,11 +48,7 @@ button{font:inherit}
 .page-heading.artwork-heading h1{margin:0}
 .page-heading h1{margin:0 0 19px;color:#5a5046;font:700 28px/1.2 'DM Sans',Arial,sans-serif;letter-spacing:-.045em}
 .page-heading p:last-child{max-width:590px;margin:0;color:var(--muted);font-size:18px;line-height:1.8}
-.contact-page{min-height:65vh}
-.contact-heading{max-width:none;margin:34px 0 26px;text-align:center}
-.page-heading.contact-heading h1{margin:0}
 .contact-panel{max-width:650px;margin:0 auto;padding:36px 40px;background:#423a32;color:var(--paper);border-radius:4px}
-.home-contact{margin-top:68px}
 .contact-panel h2{margin:0 0 22px;font-size:20px;font-weight:600}
 .contact-form{display:grid;gap:10px}
 .contact-form label{font-size:14px;font-weight:600}
@@ -71,11 +67,12 @@ button{font:inherit}
 .art-card figcaption span+span{color:var(--muted);font-size:16px}
 .artwork-more{margin:60px 0 0;color:var(--muted);font-size:17px}
 .artwork-more a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:5px}
-.site-footer{max-width:960px;margin:0 auto;padding:25px 32px 38px;border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:13px;letter-spacing:.03em}
+.site-footer{max-width:960px;margin:0 auto;padding:50px 32px 38px;border-top:1px solid var(--line);color:var(--muted);font-size:13px;letter-spacing:.03em}
+.footer-copyright{margin:28px 0 0;text-align:center}
 .modal{border:0;padding:0;max-width:min(1050px,calc(100vw - 40px));max-height:calc(100vh - 40px);background:var(--paper);color:var(--ink);box-shadow:0 20px 90px #151c1690}
 .modal::backdrop{background:#20251fdb;backdrop-filter:blur(5px)}
 .modal-inner{padding:18px}
 .modal img{display:block;max-width:100%;max-height:calc(100vh - 130px);margin:auto;object-fit:contain}
 .modal-bottom{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:15px 4px 2px;font-size:13px}
 .modal-close{border:0;background:transparent;color:var(--ink);cursor:pointer;font-size:25px;line-height:1;padding:0 5px}
-@media(max-width:650px){.site-header{padding-top:24px}.site-nav{gap:16px}.page{padding:0 24px 75px}.home-intro{margin:58px 0}.profile-grid{grid-template-columns:1fr;gap:14px}.profile-card{padding:8px 0}.research-projects{margin-top:58px}.page-heading{margin:72px 0 40px}.artwork-heading,.contact-heading{margin:26px 0 22px}.contact-panel{padding:28px 24px}.home-contact{margin-top:50px}.art-grid{grid-template-columns:1fr;gap:36px}.site-footer{margin:0 24px;padding-left:0;padding-right:0}}
+@media(max-width:650px){.site-header{padding-top:24px}.site-nav{gap:16px}.page{padding:0 24px 75px}.home-intro{margin:58px 0}.profile-grid{grid-template-columns:1fr;gap:14px}.profile-card{padding:8px 0}.research-projects{margin-top:58px}.page-heading{margin:72px 0 40px}.artwork-heading{margin:26px 0 22px}.contact-panel{padding:28px 24px}.art-grid{grid-template-columns:1fr;gap:36px}.site-footer{margin:0 24px;padding-left:0;padding-right:0}}
